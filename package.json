@@ -1,0 +1,29 @@
+{
+  "name": "mern-shopping-list",
+  "version": "1.0.0",
+  "engines": {
+    "node": "10.13.0"
+  },
+  "description": "Shopping list built with MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Natalia Quinta",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.9",
+    "mongoose": "^5.3.10"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}
